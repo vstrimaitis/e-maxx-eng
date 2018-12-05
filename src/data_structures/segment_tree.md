@@ -745,7 +745,7 @@ void push(int v) {
 void update(int v, int tl, int tr, int l, int r, int addend) {
     if (l > r) 
         return;
-    if (l == tl && tr == r) {
+    if (l <= tl && tr <= r) {
         t[v] += addend;
         lazy[v] += addend;
     } else {
